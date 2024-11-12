@@ -5,16 +5,24 @@ My Unit 7 Control Systems project.
 My Unit 7 Control Systems project is an Hand Written Digit Prediction. It uses Pygame for the user interface and the user draws a digit in the 800x800 window.
 Then The pretrained AI makes a guess to what digit it is. The `ArduinoScript.py` is the master controller for the entrire project. It launches two threads,
 the Master Thread and the Arduino Thread: These Threads serve distinct functions.
-  * Master Thread - Master Thread serves as the backbone of operation sending commands to the arduino.
-  *     * These Three Commands:
-  *     *   `ON`   - Turns on all lights on Arduino.
-  *     *   `OFF`  - Turns off all lights on the Arduino.
-  *     *   `EXIT` - Gracefully Exits all threads with the help of Arduino.
+ # Thread Responsibilities
 
-  * Arduino Thread - Arduino Thread handles most of the work and runs the Paint2D clone used to replicate the MNIST Data.
-  *     * Handles the Drawing/Inputs/Sensors by the user.
-  *     * Runs the Neural Network on the data by the user.
-  *     * Handles Communication to the arduino delivering commands by telling it which Light class to turn on (This is the `OPEN LIGHT ` Command).
+## Master Thread
+The Master Thread serves as the backbone of the operation, sending commands to the Arduino.
+
+### Commands:
+- **`ON`**: Turns on all lights on the Arduino.
+- **`OFF`**: Turns off all lights on the Arduino.
+- **`EXIT`**: Gracefully exits all threads with the help of the Arduino.
+
+## Arduino Thread
+The Arduino Thread handles most of the work and runs the Paint2D clone used to replicate the MNIST data.
+
+### Responsibilities:
+- Handles drawing, input, and sensor data from the user.
+- Runs the neural network on the user's input data.
+- Manages communication with the Arduino, delivering commands (e.g., the `OPEN LIGHT` command) to control which light (LED) class to turn on.
+
 
 ## The Neural Network
 The Neural Network is made in Pytorch and has 2 Hidden Layers. It is a very simple Neural Network and doesn't use Convolution layers as this is a very simple classification task.
