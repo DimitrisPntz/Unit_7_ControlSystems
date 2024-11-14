@@ -56,6 +56,34 @@ But despite that it has over 95% accuracy. This is the models architecture by to
 
 ## Pygame
 Using Pygame I have made a simple drawing program which simulates the training data by MNIST so it can be used with the Neural Network.
+To draw just click to draw. To reset the canvas press `SPACE`
+
+## How to use the software
+### Requirements
+- Arduino
+- Breadboard
+- 10 LEDs
+- 12 wires
+- 10 resistors
+
+### Setup Instructions
+1. **Power Connections**:
+   - Connect the Arduino’s 5V pin to the **+** power rail on the breadboard.
+   - Connect the Arduino’s GND pin to the **-** power rail on the breadboard.
+
+2. **LED Connections**:
+   - Set up each LED with a resistor, connecting them to Digital Pins 4 through 13 on the Arduino.
+
+3. **Upload the Code**:
+   - Upload the `ARDUINOCODE.ino` file to your Arduino.
+
+4. **Testing**:
+   - Run the `ArduinoScript.py` script.
+   - When prompted, enter the communication port your Arduino is using.
+   - Type `ON` in the terminal; this should turn on all the LEDs.
+
+5. **Draw and Test the Neural Network**:
+   - If the LEDs light up as expected, you’re ready to draw and have the neural network identify your digits.
 
 ## Example Usage of the System:
 ![image](https://github.com/user-attachments/assets/3a56bdcb-6470-4b07-a89a-04ccbafac6ab)
